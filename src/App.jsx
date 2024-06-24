@@ -4,6 +4,7 @@ import Footer from './components/footer';
 import Home from './pages/home';
 import Blog from './pages/blog';
 import Info from './pages/info';
+import Galeria from './pages/galeria';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/info" element={<Info/>} />
+            <Route path="/galeria" element={<Galeria/>} />
           </Routes>
         </main>
         <Footer />
