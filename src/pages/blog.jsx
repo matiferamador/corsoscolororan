@@ -17,7 +17,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 animate-slideInUp">
       <h2 className="text-2xl md:text-3xl mb-4">Blog</h2>
       {posts.map((post, index) => (
         <div key={index} className="mb-6">
