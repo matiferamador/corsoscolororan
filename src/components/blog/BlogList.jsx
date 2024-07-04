@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase';
+import { Link } from 'react-router-dom';
+
 
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
@@ -17,18 +19,45 @@ const BlogList = () => {
   }, []);
 
   return (
-    <div>
-      {posts.map(post => (
-                <a key={post.id} href={`/blog/${post.id}`} className="mb-4 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={post.imagen} alt={post.titulo} />
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.titulo}</h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{post.texto.substring(0, 100)}...</p>
-                    </div>
-                </a>
-            ))}
-
-          
+    <div className='animate-slideInUp'>
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nuestro Blog</h2>
+          <p className="mt-2 text-lg leading-8 text-gray-600">
+            Mira todas las noticias de los Corsos Color Orán
+          </p>
+        </div>
+        <div className='mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
+        {posts.map(post => {
+            const fechaString = new Date(post.fecha.seconds * 1000).toLocaleString();
+            return (
+                <article key={post.id} className='flex max-w-xl flex-col items-start justify-between'>
+                  <div className="flex items-center gap-x-4 text-xs">
+                    <p className="text-gray-500">
+                      {fechaString}
+                    </p>
+                    <a
+                      href={post.categoria}
+                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >
+                      {post.categoria}
+                    </a>
+                  </div>
+                  <div className="group relative">
+                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                  {post.titulo}
+                </h3>
+                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.texto.substring(0, 100)}...</p>
+                <Link
+                      to={`/blog/${post.id}`} 
+                      className="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+                    >
+                      Leer más
+                    </Link>
+              </div>
+        </article>
+            );
+        })}
+        </div>
       </div>
   );
 };

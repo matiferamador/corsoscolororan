@@ -8,7 +8,6 @@ import Blog from './pages/blog';
 import BlogList from './components/blog/BlogList';
 import BlogDetail from './components/blog/BlogDetail';
 
-
 const App = () => {
   return (
     <Router>
@@ -16,13 +15,13 @@ const App = () => {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} /> 
-            <Route path="/info" element={<Info/>} />
-            <Route path="/galeria" element={<Galeria/>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/galeria" element={<Galeria />} />
             <Route path="/blog" element={<Blog />}>
-                <Route index element={<BlogList />} />
-                <Route path=":id" element={<BlogDetail />} />    
-          </Route>
+              <Route index element={<BlogList />} />
+              <Route path=":id" element={<BlogDetail />} />
+            </Route>
           </Routes>
         </main>
         <Footer />
@@ -32,5 +31,3 @@ const App = () => {
 };
 
 export default App;
-
-
