@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from '../../public/Corsosweb.png'
+import Logo from '../../public/logocorsos.png'
 import{navigation} from '../components/utils/navigation'
 
 function classNames(...classes) {
@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <footer className="bg-white shadow dark:bg-gray-900">
       <div className="container mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
                  <Link to="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -37,7 +37,7 @@ const Footer = () => {
               </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025 <a href="https://flowbite.com/" className="hover:underline">Corsos Color Orán</a>.Todos los derechos reservados.</span>
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025 <Link to='/' className="hover:underline">Corsos Color Orán </Link> .Todos los derechos reservados.</span>
       </div>
     </footer>
   );

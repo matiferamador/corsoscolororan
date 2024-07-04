@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home';
-import Blog from './pages/blog';
 import Info from './pages/info';
 import Galeria from './pages/galeria';
 
@@ -13,8 +12,7 @@ const App = () => {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/" element={<Home />} /> 
             <Route path="/info" element={<Info/>} />
             <Route path="/galeria" element={<Galeria/>} />
           </Routes>

@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
-import Logo from '../../public/Corsosweb.png'
+import Logo from '../../public/logocorsos.png'
 import{navigation} from '../components/utils/navigation'
 
 function classNames(...classes) {
@@ -12,6 +12,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white border-gray-200 dark:bg-gray-900">
       {({ open }) => (
         <>
+     
           <div className="container mx-auto p-4 md:py-8 flex flex-wrap items-center justify-between">
             <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={Logo} className="h-16" alt="Flowbite Logo" />
@@ -64,6 +65,7 @@ export default function Navbar() {
             </div>
           </DisclosurePanel>
         </>
+        
       )}
     </Disclosure>
   )
