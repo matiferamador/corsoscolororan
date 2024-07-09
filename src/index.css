@@ -16,3 +16,9 @@
     animation: slideInUp 1.2s ease-out forwards;
   }
   
+  .first-letter {
+    float: left;
+    font-size: 2rem; /* Tamaño de la primera letra */
+    line-height: 1; /* Ajusta la altura de la línea si es necesario */
+    padding-right: 4px; /* Espaciado opcional para separar la primera letra del resto del texto */
+  }
