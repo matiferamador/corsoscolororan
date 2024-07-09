@@ -43,16 +43,16 @@ const BlogList = () => {
                     </a>
                   </div>
                   <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                  <Link
+                      to={`/blog/${post.id}`} 
+                                 >
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                   {post.titulo}
                 </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.texto.substring(0, 100)}...</p>
-                <Link
-                      to={`/blog/${post.id}`} 
-                      className="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
-                    >
-                      Leer más
                     </Link>
+                
+                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.texto.substring(0, 100)}...</p>
+                
               </div>
         </article>
             );
