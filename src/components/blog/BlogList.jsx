@@ -49,11 +49,11 @@ const BlogList = () => {
               </div>
               <div className="group relative">
                 <Link to={`/blog/${post.id}`}>
-                  <h3 className="mt-3 text-lg font-bold leading-6 text-gray-600 hover:text-[#6d28d9]">
+                  <h3 className="mt-3 text-lg font-bold leading-6 text-[#6d28d9] hover:text-gray-600">
                     {post.titulo}
                   </h3>
                 </Link>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-[#6d28d9]">{post.texto.substring(0, 100)}...</p>
+                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.texto.substring(0, 100)}...</p>
               </div>
             </article>
           );

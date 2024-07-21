@@ -38,7 +38,7 @@ const BlogDetail = () => {
   const fechaString = new Date(post.fecha.seconds * 1000).toLocaleString();
 
   return (
-    <article key={post.id} className="mx-auto max-w-[700px] bg-white p-5 rounded-xl drop-shadow-xl ">
+    <article key={post.id} className="mx-auto bg-white p-5 rounded-xl drop-shadow-xl ">
       <div className="group relative">
         <h1 className="mt-4 text-3xl font-semibold leading-6 text-[#6d28d9]">
           {post.titulo}
@@ -49,11 +49,11 @@ const BlogDetail = () => {
             {fechaString}
           </p>
           <a
-            href={post.categoria}
-            className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-          >
-            {post.categoria}
-          </a>
+                  href={post.categoria}
+                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:text-white hover:bg-[#6d28d9]"
+                >
+                  {post.categoria}
+                </a>
         </div>
         {post.imagen && (
           <img className="object-cover w-full rounded-t-lg h-96 md:rounded-s-lg mt-5" src={post.imagen} alt={post.titulo} />
