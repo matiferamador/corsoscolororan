@@ -6,12 +6,12 @@ const Home = () => {
     
     <div>
     <div className="relative h-screen">
-      <video className="w-full h-full object-cover absolute top-0 left-0 brightness-90 " autoPlay muted loop title="Video by Alejandro Espeche">
+      <video className="w-full h-full object-cover absolute top-0 left-0 brightness-90" autoPlay muted loop title="Video by Alejandro Espeche">
         <source src={VideoHero} type="video/mp4" />
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">
-          <h1 className="text-5xl md:text-6xl mb-4">Corsos Color Orán</h1>
+          <h1 className="text-5xl md:text-6xl mb-4 drop-shadow-2xl ">Corsos Color Orán</h1>
           <p className="text-1xl font-style: italic">Salta - Argentina</p>
         </div>
       </div>

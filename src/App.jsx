@@ -7,6 +7,7 @@ import Galeria from './pages/galeria';
 import Blog from './pages/blog';
 import BlogList from './components/blog/BlogList';
 import BlogDetail from './components/blog/BlogDetail';
+import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
   return (
@@ -14,15 +15,17 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow bg-[#f1f5f9]">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/info" element={<Info />} />
-            <Route path="/galeria" element={<Galeria />} />
-            <Route path="/blog" element={<Blog />}>
-              <Route index element={<BlogList />} />
-              <Route path=":id" element={<BlogDetail />} />
-            </Route>
-          </Routes>
+        <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/info" element={<Info />} />
+  <Route path="/galeria" element={<Galeria />} />
+  <Route path="/blog" element={<Blog />}>
+    <Route index element={<BlogList />} />
+    <Route path=":id" element={<BlogDetail />} />
+  </Route>
+  <Route path="*" element={<NotFoundPage />} />
+</Routes>
+
         </main>
         <Footer />
       </div>

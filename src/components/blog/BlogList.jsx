@@ -35,7 +35,7 @@ const BlogList = () => {
           const fechaString = new Date(post.fecha.seconds * 1000).toLocaleString();
 
           return (
-            <article key={post.id} className='flex max-w-xl flex-col items-start justify-between bg-white p-5 rounded-xl'>
+            <article key={post.id} className=' drop-shadow-xl flex max-w-xl flex-col items-start justify-between bg-white p-5 rounded-xl'>
               <div className="flex items-center gap-x-4 text-xs">
                 <p className="text-gray-500">
                   {fechaString}
