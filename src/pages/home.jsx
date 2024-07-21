@@ -11,7 +11,7 @@ const Home = () => {
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">
-          <h1 className="text-3xl md:text-6xl mb-4">Corsos Color Orán</h1>
+          <h1 className="text-5xl md:text-6xl mb-4">Corsos Color Orán</h1>
           <p className="text-1xl font-style: italic">Salta - Argentina</p>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Home = () => {
     <div className='my-20 mx-4 flex items-center justify-center text-center '>
       <div className='bg-gradient-to-r from-violet-500 to-fuchsia-500 p-10 rounded-lg '>
         <h2 className=' pb-5 text-white text-3xl md:text-4xl'>¡Ven al mejor Carnaval del Norte Argentino!</h2>
-        <button className="border border-slate-400 hover:border-slate-200 text-white p-2 rounded-lg"> Nuestra Historia</button>
+        <button className="border border-slate-400 hover:border-slate-200 text-white p-2 rounded-lg">Nuestra Historia</button>
       </div>
 
     </div>
