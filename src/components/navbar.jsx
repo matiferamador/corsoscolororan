@@ -17,7 +17,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={Logo} className="h-16" alt="ogo" />
             </Link>
-            <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#6d28d9] rounded-lg md:hidden hover:bg-[#6d28d9]  focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#6d28d9] hover:text-white rounded-lg md:hidden hover:bg-[#6d28d9]  focus:outline-none focus:ring-2 focus:ring-gray-200">
               <span className="sr-only">Open main menu</span>
               {open ? (
                 <XMarkIcon className="w-5 h-5" aria-hidden="true" />
@@ -53,7 +53,7 @@ export default function Navbar() {
                   as={Link}
                   to={item.href}
                   className={classNames(
-                    item.current ? 'text-white' : 'text-gray-500 hover:bg-[#6b21a8]',
+                    item.current ? 'text-white' : 'text-gray-500 hover:text-white hover:bg-[#6b21a8]',
                     'block py-2 px-3 rounded'
                   )}
                   aria-current={item.current ? 'page' : undefined}
