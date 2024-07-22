@@ -14,7 +14,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow bg-[#f1f5f9]">
+        <main className="flex-grow bg-[hsl(207,65%,97%)]">
         <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/info" element={<Info />} />
