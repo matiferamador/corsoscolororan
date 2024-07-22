@@ -74,7 +74,7 @@ const BlogList = () => {
           );
         })}
       </div>
-      <div className="flex items-center justify-center border-t border-gray-200 mt-20 px-4 py-3 sm:px-6">
+      <div className="flex items-center justify-center border-t border-gray-200 mt-20 px-2 py-3 sm:px-6">
         <div className="flex flex-1 justify-between sm:hidden">
           <button
             onClick={() => paginate(currentPage > 1 ? currentPage - 1 : 1)}

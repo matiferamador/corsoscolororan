@@ -73,7 +73,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8 my-20">
+      <div className="container mx-auto px-4 py-8 mt-20">
         <BlogList></BlogList>
       </div>
     </div>
