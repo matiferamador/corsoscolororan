@@ -56,12 +56,11 @@ const Home = () => {
         </video>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl mb-4 drop-shadow-2xl font-bold ">
-              Corsos Color Orán
-            </h1>
-            <p className="text-1xl font-style: italic">Salta - Argentina</p>
+          <h1 className="text-5xl md:text-6xl mb-4 font-bold text-gradient">Corsos Color Orán</h1>
+            <p className="text-2 xl font-style: italic">Salta - Argentina</p>
           </div>
         </div>
+        
       </div>
       <div className="my-20 mx-4 flex items-center justify-center text-center ">
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... px-10 py-20 rounded-xl">
