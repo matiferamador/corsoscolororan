@@ -38,7 +38,7 @@ const BlogDetail = () => {
   const fechaString = new Date(post.fecha.seconds * 1000).toLocaleString();
 
   return (
-    <article key={post.id} className="mx-auto bg-white p-5 rounded-xl drop-shadow-xl ">
+    <article key={post.id} className="mx-auto max-w-4xl bg-white p-5 rounded-xl drop-shadow-xl ">
       <div className="group relative">
         <h1 className="mt-4 text-3xl font-semibold leading-6 text-[#6d28d9]">
           {post.titulo}

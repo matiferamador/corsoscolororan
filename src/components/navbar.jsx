@@ -13,9 +13,9 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white border-gray-200">
       {({ open }) => (
         <>
-          <div className="container mx-auto p-4 md:py-8 flex flex-wrap items-center justify-between">
+          <div className="container mx-auto p-4 md:py-3 flex flex-wrap items-center justify-between">
             <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src={Logo} className="h-16" alt="ogo" />
+              <img src={Logo} className="h-16" alt="Logo Corsos Oran" />
             </Link>
             <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#6d28d9] hover:text-white rounded-lg md:hidden hover:bg-[#6d28d9]  focus:outline-none focus:ring-2 focus:ring-gray-200">
               <span className="sr-only">Open main menu</span>
