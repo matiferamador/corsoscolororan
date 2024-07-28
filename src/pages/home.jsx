@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import VideoHeroWebm from '../../public/hero/herocorsos.webm'; // Importa el video WEBM
 import VideoHeroMp4 from '../../public/hero/herocorsos.mp4'; // Importa el video MP4
 import BlogList from '../components/blog/BlogList';
+import Form from "../components/utils/form"
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -77,6 +78,10 @@ const Home = () => {
       <div className="container mx-auto px-4 py-8 mt-20">
         <BlogList></BlogList>
       </div>
+      <div>
+        <Form></Form>
+      </div>
+      
     </div>
   );
 };
