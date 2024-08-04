@@ -10,14 +10,14 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white border-gray-200">
+    <Disclosure as="nav" className="bg-transparent border-gray-200">
       {({ open }) => (
         <>
-          <div className="container mx-auto p-4 md:py-3 flex flex-wrap items-center justify-between">
+          <div className="container mx-auto p-4 md:py-3 flex flex-wrap items-center justify-between relative">
             <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={Logo} className="h-16" alt="Logo Corsos Oran" />
             </Link>
-            <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#6d28d9] hover:text-white rounded-lg md:hidden hover:bg-[#6d28d9]  focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#6d28d9] hover:text-white rounded-lg md:hidden hover:bg-[#6d28d9] focus:outline-none focus:ring-2 focus:ring-gray-200">
               <span className="sr-only">Open main menu</span>
               {open ? (
                 <XMarkIcon className="w-5 h-5" aria-hidden="true" />
@@ -26,7 +26,7 @@ export default function Navbar() {
               )}
             </DisclosureButton>
             <div className="hidden w-full md:block md:w-auto">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           <DisclosurePanel className="md:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="space-y-1 px-2 pb-3 pt-2 bg-transparent">
               {navigation.map((item) => (
                 <DisclosureButton
                   key={item.name}

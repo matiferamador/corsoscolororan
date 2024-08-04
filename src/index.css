@@ -12,18 +12,3 @@
     }
   }
   
-  body{
-  background-color:F8FAFC;
-  }
-
-  .ml3 {
-    font-weight: 800;
-    font-size: 3.5em;
-  }
-  /* Estilo personalizado para el texto con degradado */
-.text-gradient:hover {
-  cursor:pointer;
-  background: linear-gradient(to right, #4f46e5, #6d28d9, #ec4899); /* Colores del degradado */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
